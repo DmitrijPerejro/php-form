@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORM</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <form action="server.php" method="POST" class="p-3">
+    <label class="form-label" for="name">Your name:</label>   
+    <input type="text" name="name" placeholder="Mark" class="form-control w-50 mb-2" id="name">
+    <label class="form-label" for="email">Your email:</label>
+    <input type="email" name="email" placeholder="example@example.com" class="form-control w-50 mb-2" id="email">
+    <label class="form-label" for="password">Your password:</label>
+    <input type="password" name="password" class="form-control w-50 mb-2" id="password">
+    <label class="form-label" for="age">Your age:</label>
+    <input type="number" name="age" min="0" max="100" class="form-control w-50 mb-2" id="age">
+    <fieldset>
+      <legend>Your gender</legend>
+      <label class="me-2">
+        <small>Female</small>
+        <input type="radio" name="gender" value="female" class="form-check-input">
+      </label>
+      <label>
+        <small>Male</small>
+        <input type="radio" name="gender" value="male" class="form-check-input">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Your skills</legend>
+      <label class="me-2">
+        <small>HTML</small>
+        <input type="checkbox" name="skills[]" value="html" class="form-check-input">
+      </label>
+      <label>
+        <small>CSS</small>
+        <input type="checkbox" name="skills[]" value="css" class="form-check-input">
+      </label>
+      <label>
+        <small>JS</small>
+        <input type="checkbox" name="skills[]" value="js" class="form-check-input">
+      </label>
+      <label>
+        <small>TS</small>
+        <input type="checkbox" name="skills[]" value="ts" class="form-check-input">
+      </label>
+    </fieldset>
+    <label class="form-label mt-2" for="comment">Comment:</label>
+    <textarea name="comment" placeholder="Your comment..." class="form-control w-50" id="comment"></textarea>
+    <button type="submit" class="btn btn-success mt-3 w-50">
+      Send form
+    </button>
+  </form>
+</body>
+</html>
